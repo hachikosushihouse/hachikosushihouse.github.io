@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
 :root {
   --primary-color: #c1272d;
   --secondary-color: #ded3bd;
   --accent-color: #f37748;
-  --background-color: #060805;
+  --background-color: #fff;
   --secondary-bg-color: #f5f5f5;
   --primary-text-color: #1a1a1a;
   --secondary-text-color: #ded3bd;
   --light-color: #fff;
   --transition: all 0.3s ease;
   --border-radius: 15px;
+  --font-primary: 'Bellefair', serif;
 }
 
 * {
@@ -22,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-primary);
   color: var(--primary-text-color);
   background-color: var(--background-color);
   line-height: 1.6;
