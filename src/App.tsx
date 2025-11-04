@@ -11,10 +11,13 @@ function App() {
     <div className="app">
       {/* <Navbar /> */}
       <main className="main-content">
-        {/* <Home />
-        <About />
-        <Services />
-        <Contact /> */}
+        <body className="body-content">
+          <p>Hello World</p>
+          {/* <Home />
+          <About />
+          <Services />
+          <Contact /> */}
+        </body>
       </main>
       {/* <Footer /> */}
     </div>
