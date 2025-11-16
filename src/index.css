@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 
 :root {
-  --primary-color: #c1272d;
+  --primary-color: #f9b7dc;
   --secondary-color: #ded3bd;
   --accent-color: #f37748;
-  --background-color: #fff;
+  --primary-bg-color: #fff;
   --secondary-bg-color: #f5f5f5;
   --primary-text-color: #1a1a1a;
   --secondary-text-color: #ded3bd;
   --light-color: #fff;
   --transition: all 0.3s ease;
   --border-radius: 15px;
-  --font-primary: 'Bellefair', serif;
+  --primary-font-family: 'Bellefair', serif;
+  --primary-font-size: 1.5rem;
 }
 
 * {
@@ -25,29 +26,13 @@ html {
 }
 
 body {
-  font-family: var(--font-primary);
+  font-family: var(--primary-font-family);
   color: var(--primary-text-color);
-  background-color: var(--background-color);
+  background-color: var(--primary-bg-color);
   line-height: 1.6;
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.social-icons a {
-  color: var(--secondary-color);
-  transition: var(--transition);
-}
-
-.social-icons a:hover {
-  color: var(--primary-color);
-}
-
 @media (max-width: 768px) {
-
   .about-content,
   .contact-content {
     flex-direction: column;

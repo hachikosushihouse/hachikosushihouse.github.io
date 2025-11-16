@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
-import logoImage from '../assets/images/hachiko_logo.png';
+import logoImage from '../assets/images/hachiko_logo-removebg.png';
+import { SECTIONS } from '../utils/constants';
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState('home');
@@ -9,9 +10,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['home', 'about', 'services', 'contact'];
-
-            for (const section of sections) {
+            for (const section of SECTIONS) {
                 const element = document.getElementById(section);
                 if (element) {
                     const rect = element.getBoundingClientRect();
@@ -45,9 +44,13 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
                 <div className="logo">
-                    <button onClick={() => scrollToSection('home')}>
-                        <img src={logoImage} alt="Hachiko Sushi House" className="logo-image" />
-                    </button>
+                    <a href="/">
+                        <img
+                            src={logoImage}
+                            alt="Hachiko Sushi House"
+                            className="logo-image"
+                        />
+                    </a>
                 </div>
 
                 <div
@@ -60,16 +63,16 @@ const Navbar = () => {
                 </div>
 
                 <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+                    <li className={activeSection === 'menu' ? 'active' : ''}>
+                        <a href="/menu"><button>MENU</button></a>
+                    </li>
                     <li className={activeSection === 'about' ? 'active' : ''}>
-                        <button onClick={() => scrollToSection('about')}>ABOUT</button>
+                        <a href="/#about"><button>ABOUT</button></a>
                     </li>
-                    <li className={activeSection === 'services' ? 'active' : ''}>
-                        <button onClick={() => scrollToSection('services')}>
-                            SERVICES
+                    <li className={activeSection === 'location' ? 'active' : ''}>
+                        <button onClick={() => scrollToSection('location')}>
+                            LOCATION
                         </button>
-                    </li>
-                    <li className={activeSection === 'contact' ? 'active' : ''}>
-                        <button onClick={() => scrollToSection('contact')}>CONTACT</button>
                     </li>
                 </ul>
             </div>
