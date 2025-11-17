@@ -30,13 +30,8 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false); // Close menu after clicking
-    }
-  };
+  // Close mobile menu on navigation
+  const closeMenu = () => setMenuOpen(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -67,19 +62,24 @@ const Navbar = () => {
 
         <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
           <li className={activeSection === 'menu' ? 'active' : ''}>
-            <Link to="/menu">
+            {/* TODO: FIX MENU UNDERLINE */}
+            <Link
+              to="/menu"
+              className={`nav-link ${pathname === '/menu' ? 'active' : ''}`}
+              onClick={() => setMenuOpen(false)}
+            >
               <button>MENU</button>
             </Link>
           </li>
           <li className={activeSection === 'about' ? 'active' : ''}>
-            <a href="/#about">
+            <Link to="/#about" onClick={closeMenu}>
               <button>ABOUT</button>
-            </a>
+            </Link>
           </li>
           <li className={activeSection === 'location' ? 'active' : ''}>
-            <button onClick={() => scrollToSection('location')}>
-              LOCATION
-            </button>
+            <Link to="/#location" onClick={closeMenu}>
+              <button>LOCATION</button>
+            </Link>
           </li>
         </ul>
       </div>
