@@ -45,6 +45,17 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Hachiko Sushi House. All rights
             reserved.
           </p>
+          <p>
+            Created by{' '}
+            <a
+              href="https://imlocle.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Loc Le's website"
+            >
+              Loc Le
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
-import logoImage from '../assets/images/hachiko_logo-removebg.png';
+import logoImage from '../assets/images/hachiko-logo-dark-removebg.png';
 import { SECTIONS } from '../utils/constants';
 
 const Navbar = () => {
