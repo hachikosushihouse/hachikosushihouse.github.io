@@ -2,7 +2,6 @@ import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import '../styles/Footer.css';
 import logoImage from '../assets/images/hachiko-logo-dark-removebg.png';
 
-
 const Footer = () => {
   return (
     <footer className="footer">

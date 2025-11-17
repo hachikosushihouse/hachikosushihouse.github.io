@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import "../styles/Carousel.css";
+import { useEffect, useRef, useState } from 'react';
+import '../styles/Carousel.css';
 
 type ImageCarouselProps = {
   images: string[];
@@ -7,32 +7,36 @@ type ImageCarouselProps = {
   className?: string;
 };
 
-const ImageCarousel = ({ images, altTexts = [], className = "" }: ImageCarouselProps) => {
+const ImageCarousel = ({
+  images,
+  altTexts = [],
+  className = '',
+}: ImageCarouselProps) => {
   const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const startXRef = useRef<number | null>(null);
 
   const total = images.length;
 
-  const goPrev = () => setIndex((prev) => (prev - 1 + total) % total);
-  const goNext = () => setIndex((prev) => (prev + 1) % total);
+  const goPrev = () => setIndex(prev => (prev - 1 + total) % total);
+  const goNext = () => setIndex(prev => (prev + 1) % total);
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
+      if (e.key === 'ArrowLeft') {
         e.preventDefault();
         goPrev();
-      } else if (e.key === "ArrowRight") {
+      } else if (e.key === 'ArrowRight') {
         e.preventDefault();
         goNext();
       }
     };
 
-    el.addEventListener("keydown", onKeyDown);
-    return () => el.removeEventListener("keydown", onKeyDown);
+    el.addEventListener('keydown', onKeyDown);
+    return () => el.removeEventListener('keydown', onKeyDown);
   }, [total]);
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -71,11 +75,7 @@ const ImageCarousel = ({ images, altTexts = [], className = "" }: ImageCarouselP
         ‹
       </button>
 
-      <img
-        src={images[index]}
-        alt={currentAlt}
-        className="carousel-image"
-      />
+      <img src={images[index]} alt={currentAlt} className="carousel-image" />
 
       <button
         className="carousel-btn next"

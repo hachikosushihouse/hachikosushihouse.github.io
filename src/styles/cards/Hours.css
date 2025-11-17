@@ -1,21 +1,5 @@
-.hours-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .hours-content {
-  max-width: 350px;
-}
-
-.hours-summary .toggle-btn {
-  transition: transform 0.3s ease;
-  background: none;
-  border: none;
-  font-size: 1rem;
-}
-
-.hours-summary .toggle-btn.expanded {
-  transform: rotate(180deg);
+  max-width: 400px;
 }
 
 .hours-list {
@@ -39,41 +23,13 @@
   font-style: italic;
 }
 
-.toggle-container {
-  justify-self: start;
-  align-self: end;
-}
-
-.toggle-btn {
-  transition: transform 0.3s ease;
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-}
-
 @media (max-width: 600px) {
   .hours-container {
     grid-template-columns: 1fr;
-    /* one column on small screens */
     grid-template-rows: auto auto;
-  }
-
-  .toggle-container {
-    margin-top: 0.5rem;
-    justify-self: start;
-    align-self: start;
   }
 
   .hours-content {
     max-width: 100%;
-  }
-
-  .hours-list li {
-    font-size: 1rem;
-    /* smaller on mobile maybe */
-  }
-
-  .hours-list li.today {
-    font-size: 1.3rem;
   }
 }

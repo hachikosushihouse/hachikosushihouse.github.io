@@ -1,23 +1,15 @@
-import Navbar from "../components/Navbar";
-import Home from "../components/Home";
-import About from "../components/About";
-import Location from "../components/Location";
-import Footer from "../components/Footer";
+import Home from '../components/Home';
+import About from '../components/About';
+import Location from '../components/Location';
 
 const HomePage = () => {
-    return (
-        <>
-            <div className="app">
-                <Navbar />
-                <main className="main-content">
-                    <Home />
-                    <About />
-                    <Location />
-                </main>
-                <Footer />
-            </div>
-        </>
-    );
+  return (
+    <>
+      <Home />
+      <About />
+      <Location />
+    </>
+  );
 };
 
 export default HomePage;
