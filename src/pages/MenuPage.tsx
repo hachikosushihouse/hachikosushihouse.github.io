@@ -7,23 +7,16 @@ import ImageCarousel from '../components/ImageCarousel';
 
 const MenuPage = () => {
   return (
-    <>
-      <section className="menu-section">
-        <div className="menu-page">
-          <h1 className="section-title">Our Menu</h1>
-          <ImageCarousel
-            images={[mainMenu1, mainMenu2, mainMenu3, lunchMenu]}
-            altTexts={[
-              'Main Menu 1',
-              'Main Menu 2',
-              'Main Menu 3',
-              'Lunch Menu',
-            ]}
-            className="menu-carousel"
-          />
-        </div>
-      </section>
-    </>
+    <section className="menu-section">
+      <div className="menu-page">
+        <h1 className="menu-title">Our Menu</h1>
+        <ImageCarousel
+          images={[mainMenu1, mainMenu2, mainMenu3, lunchMenu]}
+          altTexts={['Main Menu 1', 'Main Menu 2', 'Main Menu 3', 'Lunch Menu']}
+          className="menu-carousel"
+        />
+      </div>
+    </section>
   );
 };
 

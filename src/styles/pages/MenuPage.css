@@ -11,10 +11,25 @@
   text-align: center;
 }
 
+.menu-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
 .menu-title {
-  font-family: 'Bellefair', serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  padding-top: 2rem;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
 }
 
 .menu-images {

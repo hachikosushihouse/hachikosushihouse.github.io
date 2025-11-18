@@ -25,7 +25,9 @@ const Hours = ({ hours }: HoursProps) => {
             >
               <span className="day">{h.day}: </span>
               <span className="time">
-                {h.open} - {h.close}
+                {h.open.trim().toLowerCase() === 'closed'
+                  ? 'Closed'
+                  : `${h.open} - ${h.close}`}
               </span>
             </li>
           ))}

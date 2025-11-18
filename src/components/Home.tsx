@@ -3,6 +3,7 @@ import logoImage from '../assets/images/hachiko-logo-dark-removebg.png';
 import '../styles/Home.css';
 
 const Home = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -12,7 +13,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="home-section">
+    <section id="home" className="home-section" ref={sectionRef}>
       <div className="container">
         <div className="home-content">
           <div className="home-logo-image-container">

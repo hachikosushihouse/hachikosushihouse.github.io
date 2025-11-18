@@ -5,17 +5,24 @@ const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // If navigating with a hash, scroll to that element instead of top
     if (hash) {
       const id = hash.slice(1);
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
+
+      const tryScroll = (attempt = 0) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+        if (attempt < 10) {
+          setTimeout(() => tryScroll(attempt + 1), 50);
+        }
+      };
+
+      tryScroll();
+      return;
     }
 
-    // Default behavior: scroll to top on route change without hash
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [pathname, hash]);
 

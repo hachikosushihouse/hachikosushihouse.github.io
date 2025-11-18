@@ -30,7 +30,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on navigation
   const closeMenu = () => setMenuOpen(false);
 
   const toggleMenu = () => {
@@ -57,28 +56,34 @@ const Navbar = () => {
           <span></span>
           <span></span>
           <span></span>
-          {/* <span></span> */}
         </div>
 
         <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-          <li className={activeSection === 'menu' ? 'active' : ''}>
-            {/* TODO: FIX MENU UNDERLINE */}
+          <li className={pathname === '/menu' ? 'active' : ''}>
             <Link
               to="/menu"
-              className={`nav-link ${pathname === '/menu' ? 'active' : ''}`}
               onClick={() => setMenuOpen(false)}
+              className="nav-link"
             >
-              <button>MENU</button>
+              MENU
             </Link>
           </li>
-          <li className={activeSection === 'about' ? 'active' : ''}>
-            <Link to="/#about" onClick={closeMenu}>
-              <button>ABOUT</button>
+          <li
+            className={
+              pathname === '/' && activeSection === 'about' ? 'active' : ''
+            }
+          >
+            <Link to="/#about" onClick={closeMenu} className="nav-link">
+              ABOUT
             </Link>
           </li>
-          <li className={activeSection === 'location' ? 'active' : ''}>
-            <Link to="/#location" onClick={closeMenu}>
-              <button>LOCATION</button>
+          <li
+            className={
+              pathname === '/' && activeSection === 'location' ? 'active' : ''
+            }
+          >
+            <Link to="/#location" onClick={closeMenu} className="nav-link">
+              LOCATION
             </Link>
           </li>
         </ul>
