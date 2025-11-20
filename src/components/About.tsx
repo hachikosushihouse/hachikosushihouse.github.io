@@ -39,12 +39,11 @@ const About = () => {
             <img src={logoImage} alt="Hachiko" className="about-title-image" />
           </div>
           <p className="about-text">
-            Hachiko Sushi House brings fresh, Japanese-inspired flavors to the
-            neighborhood. Our chefs prepare every roll and dish with attention
-            to quality and balance, offering something for sushi lovers at every
-            level. From classic favorites to new creations, we're here to
-            provide a comfortable, friendly dining experience for everyone who
-            walks through our doors.
+            With more than a decade of experience, Hachiko introduces a modern
+            approach to the sushi we know today. Our team combines creativity
+            and technique to deliver excellent service, quality flavors, and
+            fair pricing—even in today’s economic climate. Visit us and
+            experience Hachiko’s unique style of contemporary sushi.
           </p>
         </div>
       </div>
