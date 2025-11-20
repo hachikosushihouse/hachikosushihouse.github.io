@@ -17,7 +17,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="footer-social">
+          {/* <div className="footer-social">
             <p>Follow us on social media</p>
             <div className="social-icons">
               <a
@@ -37,7 +37,7 @@ const Footer = () => {
                 <FaFacebook />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="footer-bottom">
