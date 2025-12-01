@@ -17,6 +17,7 @@ const Location = () => {
               <p>{STREET_ADDRESS}</p>
               <p>{CITY}</p>
               <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+              <a href="tel:+14803897415">(480) 389-7415</a>
             </div>
             <Hours hours={HOURS} />
           </div>

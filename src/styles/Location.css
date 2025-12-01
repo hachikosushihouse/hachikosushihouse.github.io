@@ -24,6 +24,14 @@
   padding-bottom: 1rem;
 }
 
+.location-address a {
+  display: block;
+}
+
+.location-address a + a {
+  margin-top: 0.25rem;
+}
+
 .location-content-right {
   flex: 1;
 }
