@@ -1,6 +1,12 @@
 import { useRef } from 'react';
 import '../styles/Location.css';
-import { STREET_ADDRESS, HOURS, CITY, EMAIL } from '../utils/constants';
+import {
+  STREET_ADDRESS,
+  HOURS,
+  CITY,
+  EMAIL,
+  GOOGLE_MAPS_URL,
+} from '../utils/constants';
 import Hours from './cards/Hours';
 
 const Location = () => {
@@ -24,10 +30,7 @@ const Location = () => {
         </div>
         <div className="location-content-right">
           <div className="location-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.3505089010378!2d-112.0778722237119!3d33.46622407338324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b1240ecd71cd5%3A0x95986bc14692bd30!2s1616%20N%20Central%20Ave%2C%20Phoenix%2C%20AZ%2085004!5e0!3m2!1sen!2sus!4v1762372272959!5m2!1sen!2sus"
-              className="google-maps"
-            ></iframe>
+            <iframe src={GOOGLE_MAPS_URL} className="google-maps"></iframe>
           </div>
         </div>
       </div>
